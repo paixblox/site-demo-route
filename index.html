@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIXBLOX - Stop Wasting Time on Multiple Platforms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        .benefit-card {
+            transition: all 0.3s;
+            border-left: 4px solid transparent;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-left-color: #f59e0b;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-text-green {
+            background: linear-gradient(90deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gradient-text-orange {
+            background: linear-gradient(90deg, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            display: none;
+        }
+        .expandable-content.show {
+            display: block;
+            max-height: none;
+        }
+        .paixblox-badge {
+            background: linear-gradient(145deg, #7a9cc6, #f8eef2);
+            color: #000;
+        }
+
+
+
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-green-50 to-blue-100">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-100 via-green-100 to-blue-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <span class="gradient-text">PAIXBLOX</span>
+            </div>
+            <div class="paixblox-badge px-3 py-1 rounded-full text-sm font-medium">
+                Veteran-Owned Business
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Stop Wasting Time on Multiple Platforms.<br><span class="gradient-text-orange">One System. Infinite Possibilities.</span></h1>
+            <p class="text-xl text-blue-100 mb-8">
+                Your team spends hours juggling platforms and rewriting work. PAIXBLOX eliminates that friction—write once, deploy everywhere, and watch productivity soar.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://paixblox.github.io/Architectural-Unification-for-Next-Generation-Applications/" target="_blank" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition-colors">
+                    See the Demo
+                </a>
+                <button onclick="toggleTeamBenefits()" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg border border-white/20 transition-colors">
+                    Team Benefits
+                </button>
+                <button onclick="toggleDocumentation()" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg border border-white/20 transition-colors">
+                    Documentation
+                </button>
+            </div>
+            
+            <!-- Team Benefits Content -->
+            <div id="teamBenefitsContent" class="expandable-content bg-white/20 backdrop-blur-sm mt-6 rounded-lg p-6 text-left max-w-3xl mx-auto border border-white/30">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold mb-3 text-yellow-300">For Your Team</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Less context-switching between apps</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Faster project completion</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Fewer errors and headaches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Clearer visibility across projects</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-3 text-yellow-300">For Leadership</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Cut operational overhead</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Accelerate project timelines</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Increase team productivity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Reduce training costs</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4 text-xs text-blue-200 text-center">
+                    Write once, deploy everywhere - transform your workflow today
+                </div>
+            </div>
+            
+            <!-- Documentation Content -->
+            <div id="documentationContent" class="expandable-content bg-white/20 backdrop-blur-sm mt-6 rounded-lg p-6 text-left max-w-3xl mx-auto border border-white/30">
+                <h3 class="font-bold mb-4 text-yellow-300">Technical Architecture Overview</h3>
+                <div class="space-y-4 text-blue-100 text-sm">
+                    <div>
+                        <h4 class="font-semibold text-white mb-2">Elimination of Foundational Overhead</h4>
+                        <p>PAIXBLOX removes serialization tax, multi-runtime orchestration complexity, and binding maintenance through unified runtime architecture.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white mb-2">Core Capabilities</h4>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Near-zero latency communication through direct function calls</li>
+                            <li>Simplified security via proven sandbox environment</li>
+                            <li>Instantaneous startup without initialization penalties</li>
+                            <li>True "Write Once, Run Anywhere" deployment</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-white mb-2">Architectural Principles</h4>
+                        <p>Unification over bridging, runtime as universal API, portability-first design, and inherent security model.</p>
+                    </div>
+                </div>
+                <div class="mt-4 text-xs text-blue-200 text-center">
+                    Technical details available under NDA - Contact: ecomill@paixblox.com
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-gradient-to-br from-green-50 via-blue-50 to-green-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Your team spends more time on tools than results</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    The hidden costs of platform fragmentation are destroying team productivity
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card bg-white/60 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-red-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Juggling Multiple Platforms</h3>
+                    <p class="text-gray-600">
+                        Switching between different tools slows down progress and creates confusion across teams.
+                    </p>
+                </div>
+                
+                <div class="benefit-card bg-white/60 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-orange-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Data Translation Waste</h3>
+                    <p class="text-gray-600">
+                        Hours lost translating data between systems that don't communicate with each other.
+                    </p>
+                </div>
+                
+                <div class="benefit-card bg-white/60 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-red-700 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Growing Frustration</h3>
+                    <p class="text-gray-600">
+                        Errors and team frustration multiply as your organization scales up operations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-blue-100" id="benefits">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">PAIXBLOX: One Platform, Every Benefit</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Our unified platform addresses critical challenges in modern team workflows
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="benefit-card bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-green-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Write Once, Run Anywhere</h3>
+                    <p class="text-gray-600">
+                        No repetitive work. Create once and deploy across all your platforms seamlessly.
+                    </p>
+                </div>
+                
+                <div class="benefit-card bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Instant Collaboration</h3>
+                    <p class="text-gray-600">
+                        Teams work together across tools without translations or compatibility issues.
+                    </p>
+                </div>
+                
+                <div class="benefit-card bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast Delivery</h3>
+                    <p class="text-gray-600">
+                        Less friction means faster project completion and happier, more productive teams.
+                    </p>
+                </div>
+                
+                <div class="benefit-card bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md border border-white/40">
+                    <div class="text-indigo-600 text-3xl mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Seamless Integration</h3>
+                    <p class="text-gray-600">
+                        Works behind the scenes without changing how your team already operates day-to-day.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Trust Section -->
+    <section class="py-16 bg-gradient-to-br from-blue-50 via-green-50 to-blue-100" id="trust">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Proven & Trusted</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Protected intellectual property with veteran-owned business certification
+                </p>
+            </div>
+            
+            <div class="flex justify-center space-x-8 mb-8">
+                <div class="bg-white/70 backdrop-blur-sm px-6 py-4 rounded-lg text-center">
+                    <div class="text-sm text-gray-600">Copyright</div>
+                    <div class="font-bold text-gray-900">TXu 2-092-256</div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm px-6 py-4 rounded-lg text-center">
+                    <div class="text-sm text-gray-600">Copyright</div>
+                    <div class="font-bold text-gray-900">TXu 2-084-549</div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-sm px-6 py-4 rounded-lg text-center">
+                    <div class="text-sm text-gray-600">Status</div>
+                    <div class="font-bold text-gray-900">🇺🇸 Veteran-Owned</div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="https://paixblox.github.io/Architectural-Unification-for-Next-Generation-Applications/" target="_blank" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-4 px-12 rounded-lg text-lg transition-colors">
+                    Experience the Demo
+                </a>
+                <div class="mt-6 text-gray-500 text-sm">
+                    See PAIXBLOX in action - no code revealed
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4">
+                    <span class="gradient-text">PAIXBLOX</span>
+                </div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    One System. Zero Hassle. Every Team Member Wins.
+                </p>
+                <div class="mt-6 text-gray-500 text-sm">
+                    © 2025 PAIXBLOX. All rights reserved. | Veteran-Owned Business
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle team benefits content
+        function toggleTeamBenefits() {
+            const content = document.getElementById('teamBenefitsContent');
+            const docContent = document.getElementById('documentationContent');
+            
+            // Close documentation if open
+            if (docContent.classList.contains('show')) {
+                docContent.classList.remove('show');
+                docContent.style.display = 'none';
+                const docBtn = document.querySelector('[onclick="toggleDocumentation()"]');
+                docBtn.textContent = 'Documentation';
+            }
+            
+            // Toggle team benefits
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                content.style.display = 'none';
+            } else {
+                content.classList.add('show');
+                content.style.display = 'block';
+            }
+            
+            // Update button text
+            const btn = document.querySelector('[onclick="toggleTeamBenefits()"]');
+            btn.textContent = content.classList.contains('show') ? 'Hide Benefits' : 'Team Benefits';
+        }
+        
+        // Toggle documentation content
+        function toggleDocumentation() {
+            const content = document.getElementById('documentationContent');
+            const teamContent = document.getElementById('teamBenefitsContent');
+            
+            // Close team benefits if open
+            if (teamContent.classList.contains('show')) {
+                teamContent.classList.remove('show');
+                teamContent.style.display = 'none';
+                const teamBtn = document.querySelector('[onclick="toggleTeamBenefits()"]');
+                teamBtn.textContent = 'Team Benefits';
+            }
+            
+            // Toggle documentation
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                content.style.display = 'none';
+            } else {
+                content.classList.add('show');
+                content.style.display = 'block';
+            }
+            
+            // Update button text
+            const btn = document.querySelector('[onclick="toggleDocumentation()"]');
+            btn.textContent = content.classList.contains('show') ? 'Hide Documentation' : 'Documentation';
+        }
+
+        // Demo buttons link directly to the external demo site - no JavaScript needed
+        
+        // Smooth scrolling for internal navigation links only
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Only apply smooth scrolling to internal links
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
